@@ -2,7 +2,7 @@
 
 /*
  * main - print string in the function "puts"
- * Description - program prints "Programming is like building
+ * Description - program main prints "Programming is like building
  * multilingual puzzler"
  * Return: Always 0(success)
  */
