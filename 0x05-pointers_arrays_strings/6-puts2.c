@@ -4,7 +4,7 @@
  *  * puts2 - function that prints every other character of a string
  *   * @str: parameter
  *    * Return: null
- *     */
+*//
 void puts2(char *str)
 {
 		int i;
