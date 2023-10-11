@@ -12,7 +12,6 @@ typedef struct dog dog_t;
  * @name - name of dog
  * @age - The age of the dog
  * @owner - dog's owner
- * Description: A structure names dog, structure stores name, age and owner.
  */
 
 struct dog
