@@ -25,10 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	y = read(x, buf, letters);
 	z = write(STDOUT_FILENO, buf, y);
 
-	if (x == -1 || y == -1 || z == -1 || z != y )
+	if (x == -1 || y == -1 || z == -1 || z != y)
 	{
 		free(buf);
-		return(0);
+		return (0);
 	}
 
 	free(buf);
