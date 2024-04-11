@@ -20,17 +20,20 @@ int interpolation_search(int *array, size_t size, int value)
 	{
 		a = l + (double)((value - array[l]) * (h - l)) / (array[h] - array[l]);
 		if (a < size)
-			printf("Value checked array[%ld] = [%d]", a, array[a]);
+			printf("Value checked array[%ld] = [%d]\n", a, array[a]);
 		else
-			printf("Value checked array[%ld] is out of range", a);
-	}
-	if (array[a] == value)
-		return (a);
-	if (array[a] < value)
-		l = a + 1;
-	if (array[a] > value)
-		h = a - 1;
+		{
+			printf("Value checked array[%ld] is out of range\n", a);
+			break;
+		}
 
+		if (array[a] == value)
+			return (a);
+		else if (array[a] < value)
+			l = a + 1;
+		else
+			h = a - 1;
+	}
 	if (array == NULL || !array)
 		return (-1);
 
