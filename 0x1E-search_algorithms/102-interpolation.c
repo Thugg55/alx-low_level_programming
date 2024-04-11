@@ -1,4 +1,5 @@
-#inlcude "search_algos.h"
+#include "search_algos.h"
+#include <stddef.h>
 
 /**
  * interpolation_search - function searches by interpolation a target value
@@ -17,7 +18,7 @@ int interpolation_search(int *array, size_t size, int value)
 	h = size - 1;
 	while (h >= 1)
 	{
-		a = l + double(((a - array[l])(h - l)) / (array[h] - array[l]));
+		a = l + (double)((value - array[l]) * (h - l)) / (array[h] - array[l]);
 		if (a < size)
 			printf("Value checked array[%ld] = [%d]", a, array[a]);
 		else
@@ -26,9 +27,9 @@ int interpolation_search(int *array, size_t size, int value)
 	if (array[a] == value)
 		return (a);
 	if (array[a] < value)
-		l = i + 1;
+		l = a + 1;
 	if (array[a] > value)
-		h = i - 1;
+		h = a - 1;
 
 	if (array == NULL || !array)
 		return (-1);
